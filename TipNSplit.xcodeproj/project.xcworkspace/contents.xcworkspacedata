@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:tips.xcodeproj">
+      location = "self:/Users/nidhi/Documents/iOS/tips/TipNSplit.xcodeproj">
    </FileRef>
 </Workspace>

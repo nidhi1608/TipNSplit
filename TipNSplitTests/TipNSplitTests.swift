@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class tipsTests: XCTestCase {
+class TipNSplitTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

@@ -11,8 +11,9 @@
 		0371EC4D1B9FF6E200F4138C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371EC4C1B9FF6E200F4138C /* ViewController.swift */; };
 		0371EC501B9FF6E200F4138C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0371EC4E1B9FF6E200F4138C /* Main.storyboard */; };
 		0371EC521B9FF6E200F4138C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0371EC511B9FF6E200F4138C /* Images.xcassets */; };
-		0371EC551B9FF6E200F4138C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0371EC531B9FF6E200F4138C /* LaunchScreen.xib */; };
-		0371EC611B9FF6E200F4138C /* tipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371EC601B9FF6E200F4138C /* tipsTests.swift */; };
+		0371EC611B9FF6E200F4138C /* TipNSplitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371EC601B9FF6E200F4138C /* TipNSplitTests.swift */; };
+		0371EC6D1BA1678C00F4138C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371EC6C1BA1678B00F4138C /* SettingsViewController.swift */; };
+		0371EC6F1BA233E500F4138C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0371EC6E1BA233E500F4138C /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +27,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0371EC451B9FF6E200F4138C /* tips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tips.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0371EC451B9FF6E200F4138C /* TipNSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipNSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0371EC491B9FF6E200F4138C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0371EC4A1B9FF6E200F4138C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0371EC4C1B9FF6E200F4138C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0371EC4F1B9FF6E200F4138C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0371EC511B9FF6E200F4138C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0371EC541B9FF6E200F4138C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		0371EC5A1B9FF6E200F4138C /* tipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0371EC5A1B9FF6E200F4138C /* TipNSplitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipNSplitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0371EC5F1B9FF6E200F4138C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0371EC601B9FF6E200F4138C /* tipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsTests.swift; sourceTree = "<group>"; };
+		0371EC601B9FF6E200F4138C /* TipNSplitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipNSplitTests.swift; sourceTree = "<group>"; };
+		0371EC6C1BA1678B00F4138C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0371EC6E1BA233E500F4138C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +61,9 @@
 		0371EC3C1B9FF6E200F4138C = {
 			isa = PBXGroup;
 			children = (
-				0371EC471B9FF6E200F4138C /* tips */,
-				0371EC5D1B9FF6E200F4138C /* tipsTests */,
+				0371EC6E1BA233E500F4138C /* .gitignore */,
+				0371EC471B9FF6E200F4138C /* TipNSplit */,
+				0371EC5D1B9FF6E200F4138C /* TipNSplitTests */,
 				0371EC461B9FF6E200F4138C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,23 +71,23 @@
 		0371EC461B9FF6E200F4138C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0371EC451B9FF6E200F4138C /* tips.app */,
-				0371EC5A1B9FF6E200F4138C /* tipsTests.xctest */,
+				0371EC451B9FF6E200F4138C /* TipNSplit.app */,
+				0371EC5A1B9FF6E200F4138C /* TipNSplitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0371EC471B9FF6E200F4138C /* tips */ = {
+		0371EC471B9FF6E200F4138C /* TipNSplit */ = {
 			isa = PBXGroup;
 			children = (
 				0371EC4A1B9FF6E200F4138C /* AppDelegate.swift */,
 				0371EC4C1B9FF6E200F4138C /* ViewController.swift */,
+				0371EC6C1BA1678B00F4138C /* SettingsViewController.swift */,
 				0371EC4E1B9FF6E200F4138C /* Main.storyboard */,
 				0371EC511B9FF6E200F4138C /* Images.xcassets */,
-				0371EC531B9FF6E200F4138C /* LaunchScreen.xib */,
 				0371EC481B9FF6E200F4138C /* Supporting Files */,
 			);
-			path = tips;
+			path = TipNSplit;
 			sourceTree = "<group>";
 		};
 		0371EC481B9FF6E200F4138C /* Supporting Files */ = {
@@ -95,13 +98,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0371EC5D1B9FF6E200F4138C /* tipsTests */ = {
+		0371EC5D1B9FF6E200F4138C /* TipNSplitTests */ = {
 			isa = PBXGroup;
 			children = (
-				0371EC601B9FF6E200F4138C /* tipsTests.swift */,
+				0371EC601B9FF6E200F4138C /* TipNSplitTests.swift */,
 				0371EC5E1B9FF6E200F4138C /* Supporting Files */,
 			);
-			path = tipsTests;
+			path = TipNSplitTests;
 			sourceTree = "<group>";
 		};
 		0371EC5E1B9FF6E200F4138C /* Supporting Files */ = {
@@ -115,9 +118,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0371EC441B9FF6E200F4138C /* tips */ = {
+		0371EC441B9FF6E200F4138C /* TipNSplit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0371EC641B9FF6E200F4138C /* Build configuration list for PBXNativeTarget "tips" */;
+			buildConfigurationList = 0371EC641B9FF6E200F4138C /* Build configuration list for PBXNativeTarget "TipNSplit" */;
 			buildPhases = (
 				0371EC411B9FF6E200F4138C /* Sources */,
 				0371EC421B9FF6E200F4138C /* Frameworks */,
@@ -127,14 +130,14 @@
 			);
 			dependencies = (
 			);
-			name = tips;
+			name = TipNSplit;
 			productName = tips;
-			productReference = 0371EC451B9FF6E200F4138C /* tips.app */;
+			productReference = 0371EC451B9FF6E200F4138C /* TipNSplit.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0371EC591B9FF6E200F4138C /* tipsTests */ = {
+		0371EC591B9FF6E200F4138C /* TipNSplitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0371EC671B9FF6E200F4138C /* Build configuration list for PBXNativeTarget "tipsTests" */;
+			buildConfigurationList = 0371EC671B9FF6E200F4138C /* Build configuration list for PBXNativeTarget "TipNSplitTests" */;
 			buildPhases = (
 				0371EC561B9FF6E200F4138C /* Sources */,
 				0371EC571B9FF6E200F4138C /* Frameworks */,
@@ -145,9 +148,9 @@
 			dependencies = (
 				0371EC5C1B9FF6E200F4138C /* PBXTargetDependency */,
 			);
-			name = tipsTests;
+			name = TipNSplitTests;
 			productName = tipsTests;
-			productReference = 0371EC5A1B9FF6E200F4138C /* tipsTests.xctest */;
+			productReference = 0371EC5A1B9FF6E200F4138C /* TipNSplitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -168,7 +171,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0371EC401B9FF6E200F4138C /* Build configuration list for PBXProject "tips" */;
+			buildConfigurationList = 0371EC401B9FF6E200F4138C /* Build configuration list for PBXProject "TipNSplit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -181,8 +184,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0371EC441B9FF6E200F4138C /* tips */,
-				0371EC591B9FF6E200F4138C /* tipsTests */,
+				0371EC441B9FF6E200F4138C /* TipNSplit */,
+				0371EC591B9FF6E200F4138C /* TipNSplitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -193,7 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0371EC501B9FF6E200F4138C /* Main.storyboard in Resources */,
-				0371EC551B9FF6E200F4138C /* LaunchScreen.xib in Resources */,
+				0371EC6F1BA233E500F4138C /* .gitignore in Resources */,
 				0371EC521B9FF6E200F4138C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +217,7 @@
 			files = (
 				0371EC4D1B9FF6E200F4138C /* ViewController.swift in Sources */,
 				0371EC4B1B9FF6E200F4138C /* AppDelegate.swift in Sources */,
+				0371EC6D1BA1678C00F4138C /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0371EC611B9FF6E200F4138C /* tipsTests.swift in Sources */,
+				0371EC611B9FF6E200F4138C /* TipNSplitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +234,7 @@
 /* Begin PBXTargetDependency section */
 		0371EC5C1B9FF6E200F4138C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0371EC441B9FF6E200F4138C /* tips */;
+			target = 0371EC441B9FF6E200F4138C /* TipNSplit */;
 			targetProxy = 0371EC5B1B9FF6E200F4138C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -242,14 +246,6 @@
 				0371EC4F1B9FF6E200F4138C /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0371EC531B9FF6E200F4138C /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0371EC541B9FF6E200F4138C /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -340,9 +336,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = tips/Info.plist;
+				INFOPLIST_FILE = TipNSplit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TipNSplit;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -350,9 +347,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = tips/Info.plist;
+				INFOPLIST_FILE = TipNSplit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TipNSplit;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -370,7 +368,7 @@
 				);
 				INFOPLIST_FILE = tipsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TipNSplitTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tips.app/tips";
 			};
 			name = Debug;
@@ -385,7 +383,7 @@
 				);
 				INFOPLIST_FILE = tipsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TipNSplitTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tips.app/tips";
 			};
 			name = Release;
@@ -393,7 +391,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0371EC401B9FF6E200F4138C /* Build configuration list for PBXProject "tips" */ = {
+		0371EC401B9FF6E200F4138C /* Build configuration list for PBXProject "TipNSplit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0371EC621B9FF6E200F4138C /* Debug */,
@@ -402,21 +400,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0371EC641B9FF6E200F4138C /* Build configuration list for PBXNativeTarget "tips" */ = {
+		0371EC641B9FF6E200F4138C /* Build configuration list for PBXNativeTarget "TipNSplit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0371EC651B9FF6E200F4138C /* Debug */,
 				0371EC661B9FF6E200F4138C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		0371EC671B9FF6E200F4138C /* Build configuration list for PBXNativeTarget "tipsTests" */ = {
+		0371EC671B9FF6E200F4138C /* Build configuration list for PBXNativeTarget "TipNSplitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0371EC681B9FF6E200F4138C /* Debug */,
 				0371EC691B9FF6E200F4138C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

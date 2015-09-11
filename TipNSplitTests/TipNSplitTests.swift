@@ -2,9 +2,6 @@
 //  tipsTests.swift
 //  tipsTests
 //
-//  Created by nidhi on 9/8/15.
-//  Copyright (c) 2015 codepath. All rights reserved.
-//
 
 import UIKit
 import XCTest

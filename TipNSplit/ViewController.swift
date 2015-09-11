@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
@@ -18,19 +18,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var splitStepper: UIStepper!
     @IBOutlet weak var splitLabel: UILabel!
     @IBOutlet weak var tipPerPersonLabel: UILabel!
-    @IBOutlet weak var splitHeader: UILabel!
     @IBOutlet weak var tipHeader: UILabel!
     @IBOutlet weak var totalHeader: UILabel!
+    @IBOutlet weak var billContainer: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tipAmountLabel.text = "$0.00"
         totalLabel.text = "$0.00"
+        billField.delegate = self
         var defaults = NSUserDefaults.standardUserDefaults()
         var defaultTipIndex = defaults.integerForKey("default_tip")
         tipSlider.value = Float(defaultTipIndex)
         tipLabel.text = "\(defaultTipIndex)%"
+        billContainer.layer.cornerRadius = 8
+        billContainer.layer.shadowOffset = CGSizeZero
+        billContainer.layer.shadowRadius = 1
+        billContainer.layer.shadowColor = UIColor.blackColor().CGColor
+        billContainer.layer.shadowOpacity = 1
+        UIView.setAnimationsEnabled(false)
+        billField.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,8 +65,11 @@ class ViewController: UIViewController {
                 tipSlider.value = tipPercentage
             }
         }
-        billField.becomeFirstResponder()
         updateValues(animated)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        UIView.setAnimationsEnabled(true)
     }
 
 
@@ -67,11 +78,7 @@ class ViewController: UIViewController {
     }
     
     func setResultsHidden(hidden: Bool, animated: Bool) {
-        setViewHidden(tipAmountLabel, hidden: hidden, animated: animated)
-        setViewHidden(totalLabel, hidden: hidden, animated: animated)
-        setViewHidden(tipHeader, hidden: hidden, animated: animated)
-        setViewHidden(totalHeader, hidden: hidden, animated: animated)
-        setViewHidden(tipPerPersonLabel, hidden: hidden, animated: animated)
+        setViewHidden(billContainer, hidden: hidden, animated: animated)
     }
     
     func setViewHidden(view: UIView, hidden: Bool, animated: Bool) {
@@ -84,11 +91,11 @@ class ViewController: UIViewController {
         }
         view.hidden = false
         let frame = view.frame
-        let modifiedFrame = CGRectMake(frame.origin.x, frame.origin.y + 100, frame.size.width, frame.size.height)
-        view.frame = hidden ? frame : modifiedFrame
+        let offsetFrame = CGRectMake(frame.origin.x, frame.origin.y + frame.size.height, frame.size.width, frame.size.height)
+        view.frame = offsetFrame
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             view.alpha = hidden ? 0 : 1
-            view.frame = hidden ? modifiedFrame : frame
+            view.frame = hidden ? offsetFrame : frame
             }, completion: { (Bool) -> Void in
                 view.frame = frame
                 view.hidden = hidden
@@ -120,8 +127,7 @@ class ViewController: UIViewController {
             var split = Int(splitStepper.value)
             var amountPerPerson = total / Double(split)
             splitLabel.text = "\(split)"
-            tipPerPersonLabel.text = String(format: "$%.2f per person", amountPerPerson)
-            tipPerPersonLabel.hidden = split == 1
+            tipPerPersonLabel.text = String(format: "$%.2f", amountPerPerson)
         } else {
             self.setResultsHidden(true, animated: animated)
         }
@@ -130,6 +136,10 @@ class ViewController: UIViewController {
     
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) -> Void {
+        textField.becomeFirstResponder()
     }
 }
 

@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034F8EA21BA31C7A00E5B644 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 034F8EA11BA31C7A00E5B644 /* images.xcassets */; };
+		034F8EA41BA321D700E5B644 /* tip.png in Resources */ = {isa = PBXBuildFile; fileRef = 034F8EA31BA321D700E5B644 /* tip.png */; };
 		0371EC4B1B9FF6E200F4138C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371EC4A1B9FF6E200F4138C /* AppDelegate.swift */; };
 		0371EC4D1B9FF6E200F4138C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371EC4C1B9FF6E200F4138C /* ViewController.swift */; };
 		0371EC501B9FF6E200F4138C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0371EC4E1B9FF6E200F4138C /* Main.storyboard */; };
-		0371EC521B9FF6E200F4138C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0371EC511B9FF6E200F4138C /* Images.xcassets */; };
 		0371EC611B9FF6E200F4138C /* TipNSplitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371EC601B9FF6E200F4138C /* TipNSplitTests.swift */; };
 		0371EC6D1BA1678C00F4138C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371EC6C1BA1678B00F4138C /* SettingsViewController.swift */; };
 		0371EC6F1BA233E500F4138C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0371EC6E1BA233E500F4138C /* .gitignore */; };
@@ -27,12 +28,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		034F8EA11BA31C7A00E5B644 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
+		034F8EA31BA321D700E5B644 /* tip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tip.png; sourceTree = "<group>"; };
 		0371EC451B9FF6E200F4138C /* TipNSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipNSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0371EC491B9FF6E200F4138C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0371EC4A1B9FF6E200F4138C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0371EC4C1B9FF6E200F4138C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0371EC4F1B9FF6E200F4138C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0371EC511B9FF6E200F4138C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0371EC5A1B9FF6E200F4138C /* TipNSplitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipNSplitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0371EC5F1B9FF6E200F4138C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0371EC601B9FF6E200F4138C /* TipNSplitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipNSplitTests.swift; sourceTree = "<group>"; };
@@ -84,8 +86,8 @@
 				0371EC4C1B9FF6E200F4138C /* ViewController.swift */,
 				0371EC6C1BA1678B00F4138C /* SettingsViewController.swift */,
 				0371EC4E1B9FF6E200F4138C /* Main.storyboard */,
-				0371EC511B9FF6E200F4138C /* Images.xcassets */,
 				0371EC481B9FF6E200F4138C /* Supporting Files */,
+				034F8EA11BA31C7A00E5B644 /* images.xcassets */,
 			);
 			path = TipNSplit;
 			sourceTree = "<group>";
@@ -93,6 +95,7 @@
 		0371EC481B9FF6E200F4138C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				034F8EA31BA321D700E5B644 /* tip.png */,
 				0371EC491B9FF6E200F4138C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -195,9 +198,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				034F8EA21BA31C7A00E5B644 /* images.xcassets in Resources */,
 				0371EC501B9FF6E200F4138C /* Main.storyboard in Resources */,
 				0371EC6F1BA233E500F4138C /* .gitignore in Resources */,
-				0371EC521B9FF6E200F4138C /* Images.xcassets in Resources */,
+				034F8EA41BA321D700E5B644 /* tip.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +340,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TipNSplit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = TipNSplit;
@@ -347,6 +352,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TipNSplit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = TipNSplit;

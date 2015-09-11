@@ -15,4 +15,3 @@ Completed:
 
 ![Video Walkthrough](http://i.imgur.com/ZaaS8gA.gif)
 
-Note: to embed the gif file, just check your gif file into your repo and update the name of the file above.

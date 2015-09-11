@@ -30,8 +30,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         billField.delegate = self
         var defaults = NSUserDefaults.standardUserDefaults()
         var defaultTipIndex = defaults.integerForKey("default_tip")
-        tipSlider.value = Float(defaultTipIndex)
-        tipLabel.text = "\(defaultTipIndex)%"
+        if defaultTipIndex == 0 {
+            setSliderDefaults()
+        } else {
+            tipSlider.value = Float(defaultTipIndex)
+            tipLabel.text = "\(defaultTipIndex)%"
+        }
         billContainer.layer.cornerRadius = 8
         billContainer.layer.shadowOffset = CGSizeZero
         billContainer.layer.shadowRadius = 1
@@ -50,8 +54,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         let defaults = NSUserDefaults.standardUserDefaults()
         let defaultTipIndex = defaults.integerForKey("default_tip")
-        tipSlider.value = Float(defaultTipIndex)
-        tipLabel.text = "\(defaultTipIndex)%"
+        if defaultTipIndex == 0 {
+            setSliderDefaults()
+        } else {
+            tipSlider.value = Float(defaultTipIndex)
+            tipLabel.text = "\(defaultTipIndex)%"
+        }
         // Load previous session data
         if let sessionDate = defaults.objectForKey("session_date") as? NSDate {
             if NSDate().timeIntervalSinceDate(sessionDate) < 10 * 60 {
@@ -63,6 +71,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     splitStepper.value = split
                 }
                 tipSlider.value = tipPercentage
+                if tipPercentage == 0 {
+                    setSliderDefaults()
+                }
             }
         }
         updateValues(animated)
@@ -100,6 +111,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 view.frame = frame
                 view.hidden = hidden
         })
+    }
+    
+    func setSliderDefaults() {
+        tipSlider.value = 15
+        tipLabel.text = "15%"
     }
     
     func updateValues(animated: Bool) {
